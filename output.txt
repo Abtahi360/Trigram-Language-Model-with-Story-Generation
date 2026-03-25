@@ -1,0 +1,23 @@
+=== Preprocessing ===
+Vocabulary size: 3013
+Total tokens:    20811
+
+=== Text Generation (Laplace Smoothing) ===
+Seed: i will
+Generated: i will not come to day be neere me that are fat sleeke headed men and being men hearing the will the testament they were traitors honourable men all in
+
+=== Perplexity ===
+Test sentence: 'the king is dead'
+Perplexity: 3012.9999999999986
+
+=== Bonus (if attempted) ===
+Generated (Interpolation): i will not come to the capitoll to day that caesar and his traine bru the name of honor in it and for my part i haue seene more dayes
+Sentence: 'the king is dead'
+Perplexity (Laplace): 3012.9999999999986
+Perplexity (Interpolation): 370.23450934558815
+
+Comparison:
+Laplace smoothing assigns probability mass to unseen trigrams, so it is safer but often more generic.
+Simple linear interpolation uses trigram, bigram, and unigram probabilities together, which usually makes the model more flexible.
+Because interpolation uses multiple context levels, it often gives a more stable perplexity score on short test sentences.
+In generation, interpolation can produce text that feels more context-aware than Laplace-only generation.
